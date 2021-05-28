@@ -66,14 +66,14 @@ app.get("/dashboard", (req, res) => {
   }
 });
 
-// let PORT = process.env.PORT;
-// if (PORT == null || port == "") {
-//   PORT = 3000;
-// }
-//
-// app.listen(PORT, () => {
-//   console.log("Server started successfully on " + PORT);
-// });
-const PORT = process.env.PORT || 3000;
+let PORT = process.env.PORT;
+if (PORT == null || port == "") {
+  PORT = 3000;
+}
 
-app.listen(PORT, console.log(`Server running on ${PORT}`));
+app.listen(PORT, () => {
+  console.log("Server started successfully on " + PORT);
+});
+// const PORT = process.env.PORT || 3000;
+//
+// app.listen(PORT, console.log(`Server running on ${PORT}`));
