@@ -70,7 +70,7 @@ app.get("/dashboard", (req, res) => {
 });
 
 let PORT = process.env.PORT;
-if (PORT == null || port == "") {
+if (PORT == null || PORT == "") {
   PORT = 3000;
 }
 
