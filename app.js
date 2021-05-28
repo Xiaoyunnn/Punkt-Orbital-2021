@@ -75,7 +75,7 @@ if (PORT == null || port == "") {
 }
 
 app.listen(PORT, () => {
-  console.log("Server started successfully on " + PORT);
+  console.log("Server started successfully.");
 });
 // const PORT = process.env.PORT || 3000;
 //
