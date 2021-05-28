@@ -56,10 +56,10 @@ passport.deserializeUser(function(id, done) {
   });
 });
 
-// app.use("/", require("./routes/user"));
-app.get("/", (req, res) => {
-  res.render("home");
-});
+app.use("/", require("./routes/user"));
+// app.get("/", (req, res) => {
+//   res.render("home");
+// });
 
 app.get("/dashboard", (req, res) => {
   if (req.isAuthenticated()) {
