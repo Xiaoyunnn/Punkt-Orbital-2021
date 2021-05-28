@@ -37,7 +37,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
-mongoose.connect('mongodb+srv://Punkt:Orbital2021@cluster1.2saoh.mongodb.net/userDB', {
+mongoose.connect("mongodb+srv://Punkt:"+ process.env.MONGO_PW + "@cluster1.2saoh.mongodb.net/usersDB?retryWrites=true&w=majority", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });

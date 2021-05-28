@@ -30,7 +30,7 @@ body, input, button {
 .navbar-brand {
   font-weight: 800;
   font-size: 2.15rem;
-  color: #16697A!important;
+  color: #16697A !important;
   line-height: 1;
 }
 
@@ -46,27 +46,26 @@ body, input, button {
 }
 
 .navbar-light .navbar-toggler {
-    color: #16697a94;
-    border-color: #16697ae0;
+  color: #16697a94;
+  border-color: #16697ae0;
 }
 
 .navbar-light .navbar-nav .nav-link {
-    font-family: 'Mulish', sans-serif;
-    font-weight: 400;
-    font-size: 1.2rem;
-    color: rgb(22 120 140);
-    padding-right: 40px;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: rgb(22 120 140);
+  padding-right: 40px;
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
-    color: rgb(16 81 95);
+  color: rgb(16 81 95);
 }
 
 .nav-item {
   padding-right: 10%;
   display: contents;
 }
-
 
 /* Sign Up / Login Section */
 .container-main {
@@ -91,9 +90,11 @@ body, input, button {
   left: 75%;
   width: 50%;
   display: grid;
-  grid-template-columns: 1fr; /* fraction of free space */
+  grid-template-columns: 1fr;
+  /* fraction of free space */
   transform: translate(-50%, -50%);
-  transition: 1s 0.7s ease-in-out; /* time to move, delay, effect */
+  transition: 1s 0.7s ease-in-out;
+  /* time to move, delay, effect */
   z-index: 5;
 }
 
@@ -116,6 +117,12 @@ form.form-signup {
 
 form.form-login {
   z-index: 2;
+  position: fixed;
+  top: 20%;
+  left: 5%;
+  right: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .form-title {
@@ -177,7 +184,7 @@ form.form-login {
   color: grey;
 }
 
-.forgot-pw:hover{
+.forgot-pw:hover {
   color: #16697A;
 }
 
@@ -214,6 +221,7 @@ form.form-login {
 .gmail-text {
   margin: 0;
 }
+
 .fa-google {
   margin-right: 0.5rem;
 }
@@ -334,12 +342,14 @@ form.form-login {
   left: 25%;
 }
 
-.container-main.signup-mode form.form-signup { /* signup-mode: show sign up form */
+.container-main.signup-mode form.form-signup {
+  /* signup-mode: show sign up form */
   opacity: 1;
   z-index: 2;
 }
 
-.container-main.signup-mode form.form-login { /* signup-mode: hide login form */
+.container-main.signup-mode form.form-login {
+  /* signup-mode: hide login form */
   opacity: 0;
   z-index: 1;
 }
@@ -364,7 +374,6 @@ form.form-login {
   margin-bottom: 10px;
   line-height: 1.5;
   padding-right: 45px;
-
 }
 
 @media (max-width: 870px) {
@@ -398,7 +407,6 @@ form.form-login {
     grid-column: 1 / 2;
   }
 
-
   .signup-panel {
     grid-row: 1 / 2;
   }
@@ -410,7 +418,6 @@ form.form-login {
   /* .panel.login-panel .image {
     display: none;
   } */
-
   .image {
     width: 40%;
     transition: transform 0.9s ease-in-out;
@@ -489,7 +496,8 @@ form.form-login {
 
 @media (max-width: 570px) {
   .panel .content {
-    padding: 5% 8%;
+    padding-bottom: 5%;
+    padding-right: 8%;
   }
 
   .image {
@@ -501,8 +509,8 @@ form.form-login {
   }
 
   .container-main::before {
-    bottom: 73%;
-    left: 45%;
+    bottom: 76%;
+    left: 88%;
   }
 
   .signup-login {
@@ -524,10 +532,10 @@ form.form-login {
 }
 
 @media (max-width: 425px) {
-  .panel .content {
-    padding: 5% 8%;
-  }
 
+  /* .panel .content {
+    padding: 5% 8%;
+  } */
   .image {
     display: none;
   }
@@ -535,8 +543,6 @@ form.form-login {
   .container-main {
     padding: 1.5rem;
   }
-
-
 
   .signup-login {
     font-size: 13px;
@@ -573,7 +579,6 @@ form.form-login {
 
   .google-icon {
     height: 40px;
-    width: 180px;
   }
 
   .pw-requirements {
@@ -583,11 +588,10 @@ form.form-login {
   .pw-requirements p {
     margin-bottom: 2px;
   }
-
 }
 
 /* Success Page */
-.container-success{
+.container-success {
   position: relative;
   width: 100%;
   background-color: white;
@@ -598,11 +602,11 @@ form.form-login {
 }
 
 .container-success h1 {
-  font-family: 'Dosis','Montserrat', sans-serif;
+  font-family: 'Dosis', 'Montserrat', sans-serif;
   font-weight: 700;
   letter-spacing: 1.2px;
   font-size: 2.75rem;
-  color:#ffb819;
+  color: #ffb819;
 }
 
 .container-success p {
@@ -632,7 +636,6 @@ form.form-login {
   .container-success p {
     font-size: 0.85rem;
     padding: 0;
-
   }
 
   .container-success img {
@@ -673,7 +676,7 @@ form.form-login {
   text-align: left;
 }
 
-.container.top form{
+.container.top form {
   align-items: flex-start;
   padding-left: 0;
 }
@@ -708,7 +711,6 @@ form.form-login {
   padding: 7% 5%;
 
 } */
-
 @media (max-width: 1100px) {
   .container-bg-img {
     background-image: url(../img/home-phone.png);
@@ -720,7 +722,6 @@ form.form-login {
     top: 12%;
     left: 7.5%;
     padding: 7% 0 2% 15%;
-
   }
 
   .container.top h1 {
@@ -747,7 +748,7 @@ form.form-login {
     text-align: center;
   }
 
-  .container.top form{
+  .container.top form {
     align-items: center;
     padding: 0 0.5rem;
   }
@@ -776,7 +777,7 @@ form.form-login {
     top: 25px;
   }
 
-  .container.top form{
+  .container.top form {
     align-items: center;
     padding: 0 0.5rem;
   }
@@ -786,7 +787,7 @@ form.form-login {
   }
 
   .container.top p {
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.25;
   }
 }
@@ -849,12 +850,12 @@ hr {
 
 @media (max-width: 620px) {
   .feature-desc h2 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     letter-spacing: 0;
   }
 
   .feature-desc p {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.25;
   }
 }
@@ -874,13 +875,13 @@ hr {
   }
 
   .feature-desc h2 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 
   .feature-desc p {
-    font-size: 12px;
-    line-height: 1.15;
-    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 1.25;
+    margin-bottom: 7px;
   }
 }
 
@@ -982,19 +983,18 @@ hr {
     margin-bottom: 2px;
     font-size: 0.6rem;
   }
-
 }
 
 .alert-dismissible {
-    text-align: left;
+  text-align: left;
 }
 
 /* footer */
-
 .container-fluid.foot {
   background-color: #267B99;
   color: white;
-  text-align-last: center;;
+  text-align-last: center;
+  ;
   padding: 10px 0;
   position: absolute;
 }
@@ -1002,7 +1002,6 @@ hr {
 .footer-contact {
   text-decoration: none;
   color: white;
-
 }
 
 .footer-contact:hover {
@@ -1018,9 +1017,6 @@ hr {
 
 @media (max-width: 520px) {
   footer {
-
     font-size: 0.8rem;
   }
-
-
 }
