@@ -1,0 +1,34 @@
+<%- include('partials/header-before') %>
+
+<div class="container-success">
+  <form class="form-login" action="/forgot-password" method="POST">
+    <br>
+    <h2 class="form-title">Forgot Password?</h2>
+    <p>Enter your email address to receive further instructions to reset your password.</p>
+    <div class="input-field" id="input-long">
+      <i class="fas fa-envelope"></i>
+      <input type="emaill" name="username" placeholder="Email Address">
+    </div>
+
+    <% if (forgotErr !== "") { %>
+      <div class="alert alert-warning alert-dismissible fade show" role="alert" id="input-long">
+        <%= forgotErr %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    <% } %>
+
+    <% if (forgotSuccess !== "") { %>
+      <div class="alert alert-success alert-dismissible fade show" role="alert" id="input-long">
+        <%= forgotSuccess %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    <% } %>
+
+
+
+
+    <button class="bton" type="submit" name="button">Send Email</button>
+  </form>
+  </div>
+
+<%- include('partials/footer') %>

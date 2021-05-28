@@ -1,0 +1,36 @@
+<%- include('partials/header-before') %>
+
+<div class="container-success">
+
+  <form class="form-login" action="/reset/<%= token %>" method="POST">
+    <br>
+    <h2 class="form-title">Reset Password</h2>
+    <div class="pw-requirements">
+      <p>Password must be at least 6 characters with at least 1 UPPER case, 1 lower case and 1 numeric digit.</p>
+    </div>
+
+    <div class="input-field">
+      <i class="fas fa-lock"></i>
+      <input type="password" name="password" placeholder="Password">
+    </div>
+
+    <div class="input-field">
+      <i class="fas fa-lock"></i>
+      <input type="password" name="password2" placeholder="Confirm Password">
+    </div>
+
+    <% if (messages.resetErr) { %>
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      <%= messages.resetErr %>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <% } %>
+
+
+
+
+    <button class="bton" type="submit" name="button">Reset</button>
+  </form>
+</div>
+
+<%- include('partials/footer') %>

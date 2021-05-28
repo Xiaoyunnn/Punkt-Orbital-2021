@@ -1,0 +1,113 @@
+<%- include('partials/header-before') %>
+
+<div class="container-main signup-mode">
+  <div class="container-forms">
+    <div class="signup-login">
+
+      <form class="form-login" action="/login" method="POST">
+        <h2 class="form-title">Login to Punkt.</h2>
+        <div class="google-login">
+          <a href="/auth/google" class="google-icon">
+            <i class="fab fa-google"></i> Login with Google
+          </a>
+        </div>
+        <p class="gmail-text">Or use your email account</p>
+        <div class="input-field">
+          <i class="fas fa-envelope"></i>
+          <input type="emaill" name="username" value="" placeholder="Email Address">
+        </div>
+
+        <div class="input-field">
+          <i class="fas fa-lock"></i>
+          <input type="password" name="password" value="" placeholder="Password">
+        </div>
+
+        <% loginErrors.forEach(err => {%>
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          <%= err.msg %>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <% });%>
+
+        <% if (messages.resetSuccess) { %>
+          <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <%= messages.resetSuccess %>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        <% } %>
+
+        <a class="forgot-pw" href="/forgot-password">Forgot your password?</a>
+        <button class="bton" type="submit" name="button">Login</button>
+      </form>
+
+      <form class="form-signup" action="/signup" method="POST">
+        <h2 class="form-title">Create Account</h2>
+        <div class="google-login">
+          <a href="/auth/google" class="google-icon">
+            <i class="fab fa-google"></i> Login with Google
+          </a>
+        </div>
+
+        <p class="gmail-text">Or use your email for registration</p>
+
+        <div class="input-field">
+          <i class="fas fa-user"></i>
+          <input type="text" name="displayName" placeholder="Display Name">
+        </div>
+
+        <div class="input-field">
+          <i class="fas fa-envelope"></i>
+          <input type="emaill" name="username" placeholder="Email Address">
+        </div>
+
+
+        <div class="input-field">
+          <i class="fas fa-lock"></i>
+          <input type="password" name="password" placeholder="Password">
+        </div>
+
+        <div class="input-field">
+          <i class="fas fa-lock"></i>
+          <input type="password" name="password2" placeholder="Confirm Password">
+        </div>
+
+        <div class="pw-requirements">
+          <p>Password must be at least 6 characters with at least 1 UPPER case, 1 lower case and 1 numeric digit.</p>
+        </div>
+
+        <% if (messages.signupErr) { %>
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          <%= messages.signupErr %>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <% } %>
+
+        <button class="bton" type="submit" name="button">Sign Up</button>
+      </form>
+
+    </div>
+  </div>
+
+  <div class="container-panels">
+    <div class="panel signup-panel">
+      <div class="content">
+        <h3>New Here?</h3>
+        <p>Enter your personal details and start your journey with us!</p>
+        <button class="bton transparent" id="signup-btn">Sign up</button>
+      </div>
+      <img class="image" src="img/step-to-sun.svg" alt="step-to-sun">
+    </div>
+
+    <div class="panel login-panel">
+      <div class="content">
+        <h3>One of Us?</h3>
+        <p>To keep connected with us, please login with your personal details.</p>
+        <button class="bton transparent" id="login-btn">Login</button>
+      </div>
+      <img class="image" src="img/among-nature.svg" alt="among-nature">
+    </div>
+
+  </div>
+</div>
+
+<%- include('partials/footer') %>
