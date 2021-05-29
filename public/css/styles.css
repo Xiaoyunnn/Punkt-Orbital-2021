@@ -689,7 +689,9 @@ form.form-login {
 }
 
 .container.top p {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+  font-size: 18px;
+  line-height: 1.5;
 }
 
 #home-signup {
@@ -883,6 +885,11 @@ hr {
     line-height: 1.25;
     margin-bottom: 7px;
   }
+
+  .container-middle {
+    padding: 3.5% 10%;
+    margin: 0;
+  }
 }
 
 .container-bottom-bg {
@@ -914,6 +921,7 @@ hr {
   font-size: 1.25rem;
   margin-bottom: 10px;
   padding: 0 15%;
+  line-height: 1.5;
 }
 
 @media (max-width: 1100px) {
@@ -947,6 +955,7 @@ hr {
 
   .container.bottom {
     top: 50px;
+    padding: 3% 5%;
   }
 
   .container.bottom h1 {
@@ -960,7 +969,7 @@ hr {
 
 @media (max-width: 520px) {
   .container-bottom-bg {
-    min-height: 50vh;
+    min-height: 60vh;
     background-size: cover;
   }
 
@@ -971,6 +980,7 @@ hr {
   .container.bottom p {
     font-size: 13px;
     line-height: 1.25;
+    padding: 0 5%;
   }
 
   #home-signup {
